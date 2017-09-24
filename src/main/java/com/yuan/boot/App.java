@@ -12,6 +12,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter
 import com.alibaba.fastjson.serializer.SerializerFeature;
 import com.alibaba.fastjson.support.config.FastJsonConfig;
 import com.alibaba.fastjson.support.spring.FastJsonHttpMessageConverter;
+import com.yuan.boot.util.OSSManageUtil;
 
 /**
  * Hello world!
@@ -38,7 +39,7 @@ public class App extends WebMvcConfigurerAdapter{
     	 System.getProperties().put( "server.port", 8099 );
     	SpringApplication.run(App.class, args);
         System.out.println( "Hello World!" );
-      
+        System.out.println(OSSManageUtil.getUrl("other/dbz_1505399510989.jpg"));
 
 
     }
